@@ -11,19 +11,10 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/driver_package"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/driver_version"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_brand"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_country"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_hardware_profile"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_software_profile"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_store"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_tenant"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_workstation"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/inventory_manufacturer"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/inventory_model"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/software_package"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/software_version"
+	"fleet-manager-sdk-go/fleetmanager/client/driver"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet"
+	"fleet-manager-sdk-go/fleetmanager/client/inventory"
+	"fleet-manager-sdk-go/fleetmanager/client/software"
 )
 
 // Default fleetmanager HTTP client.
@@ -69,31 +60,13 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *Fleetmanag
 	cli := new(Fleetmanager)
 	cli.Transport = transport
 
-	cli.DriverPackage = driver_package.New(transport, formats)
+	cli.Driver = driver.New(transport, formats)
 
-	cli.DriverVersion = driver_version.New(transport, formats)
+	cli.Fleet = fleet.New(transport, formats)
 
-	cli.FleetBrand = fleet_brand.New(transport, formats)
+	cli.Inventory = inventory.New(transport, formats)
 
-	cli.FleetCountry = fleet_country.New(transport, formats)
-
-	cli.FleetHardwareProfile = fleet_hardware_profile.New(transport, formats)
-
-	cli.FleetSoftwareProfile = fleet_software_profile.New(transport, formats)
-
-	cli.FleetStore = fleet_store.New(transport, formats)
-
-	cli.FleetTenant = fleet_tenant.New(transport, formats)
-
-	cli.FleetWorkstation = fleet_workstation.New(transport, formats)
-
-	cli.InventoryManufacturer = inventory_manufacturer.New(transport, formats)
-
-	cli.InventoryModel = inventory_model.New(transport, formats)
-
-	cli.SoftwarePackage = software_package.New(transport, formats)
-
-	cli.SoftwareVersion = software_version.New(transport, formats)
+	cli.Software = software.New(transport, formats)
 
 	return cli
 }
@@ -139,31 +112,13 @@ func (cfg *TransportConfig) WithSchemes(schemes []string) *TransportConfig {
 
 // Fleetmanager is a client for fleetmanager
 type Fleetmanager struct {
-	DriverPackage *driver_package.Client
+	Driver *driver.Client
 
-	DriverVersion *driver_version.Client
+	Fleet *fleet.Client
 
-	FleetBrand *fleet_brand.Client
+	Inventory *inventory.Client
 
-	FleetCountry *fleet_country.Client
-
-	FleetHardwareProfile *fleet_hardware_profile.Client
-
-	FleetSoftwareProfile *fleet_software_profile.Client
-
-	FleetStore *fleet_store.Client
-
-	FleetTenant *fleet_tenant.Client
-
-	FleetWorkstation *fleet_workstation.Client
-
-	InventoryManufacturer *inventory_manufacturer.Client
-
-	InventoryModel *inventory_model.Client
-
-	SoftwarePackage *software_package.Client
-
-	SoftwareVersion *software_version.Client
+	Software *software.Client
 
 	Transport runtime.ClientTransport
 }
@@ -172,30 +127,12 @@ type Fleetmanager struct {
 func (c *Fleetmanager) SetTransport(transport runtime.ClientTransport) {
 	c.Transport = transport
 
-	c.DriverPackage.SetTransport(transport)
+	c.Driver.SetTransport(transport)
 
-	c.DriverVersion.SetTransport(transport)
+	c.Fleet.SetTransport(transport)
 
-	c.FleetBrand.SetTransport(transport)
+	c.Inventory.SetTransport(transport)
 
-	c.FleetCountry.SetTransport(transport)
-
-	c.FleetHardwareProfile.SetTransport(transport)
-
-	c.FleetSoftwareProfile.SetTransport(transport)
-
-	c.FleetStore.SetTransport(transport)
-
-	c.FleetTenant.SetTransport(transport)
-
-	c.FleetWorkstation.SetTransport(transport)
-
-	c.InventoryManufacturer.SetTransport(transport)
-
-	c.InventoryModel.SetTransport(transport)
-
-	c.SoftwarePackage.SetTransport(transport)
-
-	c.SoftwareVersion.SetTransport(transport)
+	c.Software.SetTransport(transport)
 
 }

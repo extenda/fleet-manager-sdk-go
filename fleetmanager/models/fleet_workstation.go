@@ -17,6 +17,9 @@ import (
 // swagger:model FleetWorkstation
 type FleetWorkstation struct {
 
+	// hardware profile
+	HardwareProfile *FleetWorkstationHardwareProfile `json:"hardwareProfile,omitempty"`
+
 	// id
 	// Required: true
 	ID *string `json:"id"`
@@ -28,6 +31,9 @@ type FleetWorkstation struct {
 	// Required: true
 	Name *string `json:"name"`
 
+	// software profile
+	SoftwareProfile *FleetWorkstationSoftwareProfile `json:"softwareProfile,omitempty"`
+
 	// system properties Url
 	SystemPropertiesURL string `json:"systemPropertiesUrl,omitempty"`
 }
@@ -35,6 +41,10 @@ type FleetWorkstation struct {
 // Validate validates this fleet workstation
 func (m *FleetWorkstation) Validate(formats strfmt.Registry) error {
 	var res []error
+
+	if err := m.validateHardwareProfile(formats); err != nil {
+		res = append(res, err)
+	}
 
 	if err := m.validateID(formats); err != nil {
 		res = append(res, err)
@@ -44,9 +54,31 @@ func (m *FleetWorkstation) Validate(formats strfmt.Registry) error {
 		res = append(res, err)
 	}
 
+	if err := m.validateSoftwareProfile(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *FleetWorkstation) validateHardwareProfile(formats strfmt.Registry) error {
+
+	if swag.IsZero(m.HardwareProfile) { // not required
+		return nil
+	}
+
+	if m.HardwareProfile != nil {
+		if err := m.HardwareProfile.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("hardwareProfile")
+			}
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -68,6 +100,24 @@ func (m *FleetWorkstation) validateName(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *FleetWorkstation) validateSoftwareProfile(formats strfmt.Registry) error {
+
+	if swag.IsZero(m.SoftwareProfile) { // not required
+		return nil
+	}
+
+	if m.SoftwareProfile != nil {
+		if err := m.SoftwareProfile.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("softwareProfile")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // MarshalBinary interface implementation
 func (m *FleetWorkstation) MarshalBinary() ([]byte, error) {
 	if m == nil {
@@ -79,6 +129,106 @@ func (m *FleetWorkstation) MarshalBinary() ([]byte, error) {
 // UnmarshalBinary interface implementation
 func (m *FleetWorkstation) UnmarshalBinary(b []byte) error {
 	var res FleetWorkstation
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*m = res
+	return nil
+}
+
+// FleetWorkstationHardwareProfile fleet workstation hardware profile
+// swagger:model FleetWorkstationHardwareProfile
+type FleetWorkstationHardwareProfile struct {
+
+	// href
+	// Required: true
+	Href *string `json:"href"`
+}
+
+// Validate validates this fleet workstation hardware profile
+func (m *FleetWorkstationHardwareProfile) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateHref(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *FleetWorkstationHardwareProfile) validateHref(formats strfmt.Registry) error {
+
+	if err := validate.Required("hardwareProfile"+"."+"href", "body", m.Href); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (m *FleetWorkstationHardwareProfile) MarshalBinary() ([]byte, error) {
+	if m == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(m)
+}
+
+// UnmarshalBinary interface implementation
+func (m *FleetWorkstationHardwareProfile) UnmarshalBinary(b []byte) error {
+	var res FleetWorkstationHardwareProfile
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*m = res
+	return nil
+}
+
+// FleetWorkstationSoftwareProfile fleet workstation software profile
+// swagger:model FleetWorkstationSoftwareProfile
+type FleetWorkstationSoftwareProfile struct {
+
+	// href
+	// Required: true
+	Href *string `json:"href"`
+}
+
+// Validate validates this fleet workstation software profile
+func (m *FleetWorkstationSoftwareProfile) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateHref(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *FleetWorkstationSoftwareProfile) validateHref(formats strfmt.Registry) error {
+
+	if err := validate.Required("softwareProfile"+"."+"href", "body", m.Href); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (m *FleetWorkstationSoftwareProfile) MarshalBinary() ([]byte, error) {
+	if m == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(m)
+}
+
+// UnmarshalBinary interface implementation
+func (m *FleetWorkstationSoftwareProfile) UnmarshalBinary(b []byte) error {
+	var res FleetWorkstationSoftwareProfile
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}
