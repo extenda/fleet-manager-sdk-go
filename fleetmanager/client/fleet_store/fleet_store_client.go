@@ -53,30 +53,30 @@ func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStore
 }
 
 /*
-DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURL deletes fleet store system properties
+DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemproperties deletes fleet store system properties
 */
-func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURL(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLNoContent, error) {
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemproperties(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLParams()
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURL",
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemproperties",
 		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/systemPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/systemproperties",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLReader{formats: a.formats},
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLNoContent), nil
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesNoContent), nil
 
 }
 
@@ -137,30 +137,30 @@ func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreID(
 }
 
 /*
-GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURL uploads fleet store system properties
+GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemproperties uploads fleet store system properties
 */
-func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURL(params *GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLParams) (*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLOK, error) {
+func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemproperties(params *GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesParams) (*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLParams()
+		params = NewGetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURL",
+		ID:                 "GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemproperties",
 		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/systemPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/systemproperties",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLReader{formats: a.formats},
+		Reader:             &GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystemPropertiesURLOK), nil
+	return result.(*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDSystempropertiesOK), nil
 
 }
 

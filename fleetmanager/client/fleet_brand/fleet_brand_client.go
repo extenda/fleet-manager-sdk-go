@@ -53,30 +53,30 @@ func (a *Client) DeleteFleetTenantTenantIDBrandBrandID(params *DeleteFleetTenant
 }
 
 /*
-DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURL deletes fleet brand system properties
+DeleteFleetTenantTenantIDBrandBrandIDSystemproperties deletes fleet brand system properties
 */
-func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURL(params *DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURLParams) (*DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURLNoContent, error) {
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDSystemproperties(params *DeleteFleetTenantTenantIDBrandBrandIDSystempropertiesParams) (*DeleteFleetTenantTenantIDBrandBrandIDSystempropertiesNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURLParams()
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDSystempropertiesParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURL",
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDSystemproperties",
 		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/systemPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/systemproperties",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURLReader{formats: a.formats},
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDSystempropertiesReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteFleetTenantTenantIDBrandBrandIDSystemPropertiesURLNoContent), nil
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDSystempropertiesNoContent), nil
 
 }
 
@@ -137,30 +137,30 @@ func (a *Client) GetFleetTenantTenantIDBrandBrandID(params *GetFleetTenantTenant
 }
 
 /*
-GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURL uploads fleet brand system properties
+GetFleetTenantTenantIDBrandBrandIDSystemproperties uploads fleet brand system properties
 */
-func (a *Client) GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURL(params *GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURLParams) (*GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURLOK, error) {
+func (a *Client) GetFleetTenantTenantIDBrandBrandIDSystemproperties(params *GetFleetTenantTenantIDBrandBrandIDSystempropertiesParams) (*GetFleetTenantTenantIDBrandBrandIDSystempropertiesOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetFleetTenantTenantIDBrandBrandIDSystemPropertiesURLParams()
+		params = NewGetFleetTenantTenantIDBrandBrandIDSystempropertiesParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURL",
+		ID:                 "GetFleetTenantTenantIDBrandBrandIDSystemproperties",
 		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/systemPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/systemproperties",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURLReader{formats: a.formats},
+		Reader:             &GetFleetTenantTenantIDBrandBrandIDSystempropertiesReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetFleetTenantTenantIDBrandBrandIDSystemPropertiesURLOK), nil
+	return result.(*GetFleetTenantTenantIDBrandBrandIDSystempropertiesOK), nil
 
 }
 

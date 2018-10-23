@@ -53,58 +53,114 @@ func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStore
 }
 
 /*
-DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURL deletes fleet workstation j p o s entries XML
+DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofile unlinks fleet workstation from fleet hardware profile
 */
-func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURL(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLNoContent, error) {
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofile(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLParams()
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURL",
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofile",
 		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/jposEntriesXmlUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/fleethardwareprofile",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLReader{formats: a.formats},
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLNoContent), nil
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileNoContent), nil
 
 }
 
 /*
-DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURL deletes fleet workstation system properties
+DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofile unlinks fleet workstation from fleet software profile
 */
-func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURL(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLNoContent, error) {
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofile(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLParams()
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURL",
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofile",
 		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/systemPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/fleetsoftwareprofile",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLReader{formats: a.formats},
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLNoContent), nil
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileNoContent), nil
+
+}
+
+/*
+DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxml deletes fleet workstation j p o s entries XML
+*/
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxml(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxml",
+		Method:             "DELETE",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/jposentriesxml",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlNoContent), nil
+
+}
+
+/*
+DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemproperties deletes fleet workstation system properties
+*/
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemproperties(params *DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesParams) (*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemproperties",
+		Method:             "DELETE",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/systemproperties",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesNoContent), nil
 
 }
 
@@ -193,58 +249,58 @@ func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDW
 }
 
 /*
-GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURL uploads fleet workstation j p o s entries XML
+GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxml uploads fleet workstation j p o s entries XML
 */
-func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURL(params *GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLParams) (*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLOK, error) {
+func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxml(params *GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlParams) (*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLParams()
+		params = NewGetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURL",
+		ID:                 "GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxml",
 		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/jposEntriesXmlUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/jposentriesxml",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLReader{formats: a.formats},
+		Reader:             &GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposEntriesXMLURLOK), nil
+	return result.(*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDJposentriesxmlOK), nil
 
 }
 
 /*
-GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURL uploads fleet workstation system properties
+GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemproperties uploads fleet workstation system properties
 */
-func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURL(params *GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLParams) (*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLOK, error) {
+func (a *Client) GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemproperties(params *GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesParams) (*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLParams()
+		params = NewGetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURL",
+		ID:                 "GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemproperties",
 		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/systemPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/systemproperties",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLReader{formats: a.formats},
+		Reader:             &GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystemPropertiesURLOK), nil
+	return result.(*GetFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSystempropertiesOK), nil
 
 }
 
@@ -277,58 +333,58 @@ func (a *Client) PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreID
 }
 
 /*
-PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofile links fleet workstation with fleet hardware profile
+PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofile links fleet workstation with fleet hardware profile
 */
-func (a *Client) PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofile(params *PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofileParams) (*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofileNoContent, error) {
+func (a *Client) PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofile(params *PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileParams) (*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewPostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofileParams()
+		params = NewPostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofile",
+		ID:                 "PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofile",
 		Method:             "POST",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/hardwareprofile",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/fleethardwareprofile",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofileReader{formats: a.formats},
+		Reader:             &PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDHardwareprofileNoContent), nil
+	return result.(*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleethardwareprofileNoContent), nil
 
 }
 
 /*
-PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofile links fleet workstation with fleet software profile
+PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofile links fleet workstation with fleet software profile
 */
-func (a *Client) PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofile(params *PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofileParams) (*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofileNoContent, error) {
+func (a *Client) PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofile(params *PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileParams) (*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewPostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofileParams()
+		params = NewPostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofile",
+		ID:                 "PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofile",
 		Method:             "POST",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/softwareprofile",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/country/{countryId}/store/{storeId}/workstation/{workstationId}/fleetsoftwareprofile",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofileReader{formats: a.formats},
+		Reader:             &PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDSoftwareprofileNoContent), nil
+	return result.(*PostFleetTenantTenantIDBrandBrandIDCountryCountryIDStoreStoreIDWorkstationWorkstationIDFleetsoftwareprofileNoContent), nil
 
 }
 

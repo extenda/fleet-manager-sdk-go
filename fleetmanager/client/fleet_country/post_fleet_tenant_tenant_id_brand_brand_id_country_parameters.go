@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "github.com/extenda/fleet-manager-sdk-go/fleetmanager/models"
+	models "fleet-manager-sdk-go/fleetmanager/models"
 )
 
 // NewPostFleetTenantTenantIDBrandBrandIDCountryParams creates a new PostFleetTenantTenantIDBrandBrandIDCountryParams object

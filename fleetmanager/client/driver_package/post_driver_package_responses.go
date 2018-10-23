@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "github.com/extenda/fleet-manager-sdk-go/fleetmanager/models"
+	models "fleet-manager-sdk-go/fleetmanager/models"
 )
 
 // PostDriverPackageReader is a Reader for the PostDriverPackage structure.

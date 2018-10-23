@@ -53,30 +53,30 @@ func (a *Client) DeleteDriverPackagePackageIDVersionVersionID(params *DeleteDriv
 }
 
 /*
-DeleteDriverPackagePackageIDVersionVersionIDBinaryURL deletes driver binary
+DeleteDriverPackagePackageIDVersionVersionIDBinary deletes driver binary
 */
-func (a *Client) DeleteDriverPackagePackageIDVersionVersionIDBinaryURL(params *DeleteDriverPackagePackageIDVersionVersionIDBinaryURLParams) (*DeleteDriverPackagePackageIDVersionVersionIDBinaryURLNoContent, error) {
+func (a *Client) DeleteDriverPackagePackageIDVersionVersionIDBinary(params *DeleteDriverPackagePackageIDVersionVersionIDBinaryParams) (*DeleteDriverPackagePackageIDVersionVersionIDBinaryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteDriverPackagePackageIDVersionVersionIDBinaryURLParams()
+		params = NewDeleteDriverPackagePackageIDVersionVersionIDBinaryParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteDriverPackagePackageIDVersionVersionIDBinaryURL",
+		ID:                 "DeleteDriverPackagePackageIDVersionVersionIDBinary",
 		Method:             "DELETE",
-		PathPattern:        "/driver/package/{packageId}/version/{versionId}/binaryUrl",
+		PathPattern:        "/driver/package/{packageId}/version/{versionId}/binary",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteDriverPackagePackageIDVersionVersionIDBinaryURLReader{formats: a.formats},
+		Reader:             &DeleteDriverPackagePackageIDVersionVersionIDBinaryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteDriverPackagePackageIDVersionVersionIDBinaryURLNoContent), nil
+	return result.(*DeleteDriverPackagePackageIDVersionVersionIDBinaryNoContent), nil
 
 }
 
@@ -137,30 +137,30 @@ func (a *Client) GetDriverPackagePackageIDVersionVersionID(params *GetDriverPack
 }
 
 /*
-GetDriverPackagePackageIDVersionVersionIDBinaryURL uploads driver binary
+GetDriverPackagePackageIDVersionVersionIDBinary uploads driver binary
 */
-func (a *Client) GetDriverPackagePackageIDVersionVersionIDBinaryURL(params *GetDriverPackagePackageIDVersionVersionIDBinaryURLParams) (*GetDriverPackagePackageIDVersionVersionIDBinaryURLOK, error) {
+func (a *Client) GetDriverPackagePackageIDVersionVersionIDBinary(params *GetDriverPackagePackageIDVersionVersionIDBinaryParams) (*GetDriverPackagePackageIDVersionVersionIDBinaryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetDriverPackagePackageIDVersionVersionIDBinaryURLParams()
+		params = NewGetDriverPackagePackageIDVersionVersionIDBinaryParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetDriverPackagePackageIDVersionVersionIDBinaryURL",
+		ID:                 "GetDriverPackagePackageIDVersionVersionIDBinary",
 		Method:             "GET",
-		PathPattern:        "/driver/package/{packageId}/version/{versionId}/binaryUrl",
+		PathPattern:        "/driver/package/{packageId}/version/{versionId}/binary",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetDriverPackagePackageIDVersionVersionIDBinaryURLReader{formats: a.formats},
+		Reader:             &GetDriverPackagePackageIDVersionVersionIDBinaryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetDriverPackagePackageIDVersionVersionIDBinaryURLOK), nil
+	return result.(*GetDriverPackagePackageIDVersionVersionIDBinaryOK), nil
 
 }
 

@@ -53,6 +53,34 @@ func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwarePro
 }
 
 /*
+DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversion unlinks fleet software profile from software version
+*/
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversion(params *DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionParams) (*DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversion",
+		Method:             "DELETE",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/softwareprofile/{softwareProfileId}/softwareversion",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionNoContent), nil
+
+}
+
+/*
 GetFleetTenantTenantIDBrandBrandIDSoftwareprofile lists fleet software profiles
 */
 func (a *Client) GetFleetTenantTenantIDBrandBrandIDSoftwareprofile(params *GetFleetTenantTenantIDBrandBrandIDSoftwareprofileParams) (*GetFleetTenantTenantIDBrandBrandIDSoftwareprofileOK, error) {
@@ -137,30 +165,30 @@ func (a *Client) PostFleetTenantTenantIDBrandBrandIDSoftwareprofile(params *Post
 }
 
 /*
-PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileID links fleet software profile with software version
+PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversion links fleet software profile with software version
 */
-func (a *Client) PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileID(params *PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDParams) (*PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDNoContent, error) {
+func (a *Client) PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversion(params *PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionParams) (*PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewPostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDParams()
+		params = NewPostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileID",
+		ID:                 "PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversion",
 		Method:             "POST",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/softwareprofile/{softwareProfileId}",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/softwareprofile/{softwareProfileId}/softwareversion",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDReader{formats: a.formats},
+		Reader:             &PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDNoContent), nil
+	return result.(*PostFleetTenantTenantIDBrandBrandIDSoftwareprofileSoftwareProfileIDSoftwareversionNoContent), nil
 
 }
 

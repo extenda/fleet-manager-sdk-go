@@ -11,19 +11,19 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/driver_package"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/driver_version"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_brand"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_country"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_hardware_profile"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_software_profile"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_store"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_tenant"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/fleet_workstation"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/inventory_manufacturer"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/inventory_model"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/software_package"
-	"github.com/extenda/fleet-manager-sdk-go/fleetmanager/client/software_version"
+	"fleet-manager-sdk-go/fleetmanager/client/driver_package"
+	"fleet-manager-sdk-go/fleetmanager/client/driver_version"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_brand"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_country"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_hardware_profile"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_software_profile"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_store"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_tenant"
+	"fleet-manager-sdk-go/fleetmanager/client/fleet_workstation"
+	"fleet-manager-sdk-go/fleetmanager/client/inventory_manufacturer"
+	"fleet-manager-sdk-go/fleetmanager/client/inventory_model"
+	"fleet-manager-sdk-go/fleetmanager/client/software_package"
+	"fleet-manager-sdk-go/fleetmanager/client/software_version"
 )
 
 // Default fleetmanager HTTP client.

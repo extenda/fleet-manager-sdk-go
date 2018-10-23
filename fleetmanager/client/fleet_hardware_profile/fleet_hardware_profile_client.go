@@ -53,58 +53,86 @@ func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwarePro
 }
 
 /*
-DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURL deletes fleet hardware profile j p o s entries XML
+DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodel unlinks fleet hardware profile from inventory model
 */
-func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURL(params *DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLParams) (*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLNoContent, error) {
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodel(params *DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelParams) (*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLParams()
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURL",
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodel",
 		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jposEntriesXmlUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/inventorymodel",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLReader{formats: a.formats},
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLNoContent), nil
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelNoContent), nil
 
 }
 
 /*
-DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURL deletes fleet hardware profile j p o s paths properties
+DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxml deletes fleet hardware profile j p o s entries XML
 */
-func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURL(params *DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLParams) (*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLNoContent, error) {
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxml(params *DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlParams) (*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLParams()
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURL",
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxml",
 		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jposPathsPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jposentriesxml",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLReader{formats: a.formats},
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLNoContent), nil
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlNoContent), nil
+
+}
+
+/*
+DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathsproperties deletes fleet hardware profile j p o s paths properties
+*/
+func (a *Client) DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathsproperties(params *DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesParams) (*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathsproperties",
+		Method:             "DELETE",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jpospathsproperties",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesNoContent), nil
 
 }
 
@@ -165,58 +193,58 @@ func (a *Client) GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfil
 }
 
 /*
-GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURL uploads fleet hardware profile j p o s entries XML
+GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxml uploads fleet hardware profile j p o s entries XML
 */
-func (a *Client) GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURL(params *GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLParams) (*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLOK, error) {
+func (a *Client) GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxml(params *GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlParams) (*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLParams()
+		params = NewGetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURL",
+		ID:                 "GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxml",
 		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jposEntriesXmlUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jposentriesxml",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLReader{formats: a.formats},
+		Reader:             &GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposEntriesXMLURLOK), nil
+	return result.(*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposentriesxmlOK), nil
 
 }
 
 /*
-GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURL uploads fleet hardware profile j p o s paths properties
+GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathsproperties uploads fleet hardware profile j p o s paths properties
 */
-func (a *Client) GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURL(params *GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLParams) (*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLOK, error) {
+func (a *Client) GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathsproperties(params *GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesParams) (*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLParams()
+		params = NewGetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURL",
+		ID:                 "GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathsproperties",
 		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jposPathsPropertiesUrl",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/jpospathsproperties",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLReader{formats: a.formats},
+		Reader:             &GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJposPathsPropertiesURLOK), nil
+	return result.(*GetFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDJpospathspropertiesOK), nil
 
 }
 
@@ -249,30 +277,30 @@ func (a *Client) PostFleetTenantTenantIDBrandBrandIDHardwareprofile(params *Post
 }
 
 /*
-PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileID links fleet hardware profile with inventory model
+PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodel links fleet hardware profile with inventory model
 */
-func (a *Client) PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileID(params *PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDParams) (*PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDNoContent, error) {
+func (a *Client) PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodel(params *PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelParams) (*PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewPostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDParams()
+		params = NewPostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileID",
+		ID:                 "PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodel",
 		Method:             "POST",
-		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}",
+		PathPattern:        "/fleet/tenant/{tenantId}/brand/{brandId}/hardwareprofile/{hardwareProfileId}/inventorymodel",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDReader{formats: a.formats},
+		Reader:             &PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDNoContent), nil
+	return result.(*PostFleetTenantTenantIDBrandBrandIDHardwareprofileHardwareProfileIDInventorymodelNoContent), nil
 
 }
 

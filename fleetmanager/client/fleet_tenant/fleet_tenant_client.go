@@ -25,198 +25,198 @@ type Client struct {
 }
 
 /*
-DeleteFleetTenantTenantID deletes fleet tenant
+CreateTenant creates fleet tenant
 */
-func (a *Client) DeleteFleetTenantTenantID(params *DeleteFleetTenantTenantIDParams) (*DeleteFleetTenantTenantIDNoContent, error) {
+func (a *Client) CreateTenant(params *CreateTenantParams) (*CreateTenantCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteFleetTenantTenantIDParams()
+		params = NewCreateTenantParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantID",
-		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDReader{formats: a.formats},
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return result.(*DeleteFleetTenantTenantIDNoContent), nil
-
-}
-
-/*
-DeleteFleetTenantTenantIDSystemPropertiesURL deletes fleet tenant system properties
-*/
-func (a *Client) DeleteFleetTenantTenantIDSystemPropertiesURL(params *DeleteFleetTenantTenantIDSystemPropertiesURLParams) (*DeleteFleetTenantTenantIDSystemPropertiesURLNoContent, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewDeleteFleetTenantTenantIDSystemPropertiesURLParams()
-	}
-
-	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteFleetTenantTenantIDSystemPropertiesURL",
-		Method:             "DELETE",
-		PathPattern:        "/fleet/tenant/{tenantId}/systemPropertiesUrl",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &DeleteFleetTenantTenantIDSystemPropertiesURLReader{formats: a.formats},
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return result.(*DeleteFleetTenantTenantIDSystemPropertiesURLNoContent), nil
-
-}
-
-/*
-GetFleetTenant lists fleet tenants
-*/
-func (a *Client) GetFleetTenant(params *GetFleetTenantParams) (*GetFleetTenantOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewGetFleetTenantParams()
-	}
-
-	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenant",
-		Method:             "GET",
-		PathPattern:        "/fleet/tenant",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &GetFleetTenantReader{formats: a.formats},
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return result.(*GetFleetTenantOK), nil
-
-}
-
-/*
-GetFleetTenantTenantID gets fleet tenant details
-*/
-func (a *Client) GetFleetTenantTenantID(params *GetFleetTenantTenantIDParams) (*GetFleetTenantTenantIDOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewGetFleetTenantTenantIDParams()
-	}
-
-	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantID",
-		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &GetFleetTenantTenantIDReader{formats: a.formats},
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return result.(*GetFleetTenantTenantIDOK), nil
-
-}
-
-/*
-GetFleetTenantTenantIDSystemPropertiesURL uploads fleet tenant system properties
-*/
-func (a *Client) GetFleetTenantTenantIDSystemPropertiesURL(params *GetFleetTenantTenantIDSystemPropertiesURLParams) (*GetFleetTenantTenantIDSystemPropertiesURLOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewGetFleetTenantTenantIDSystemPropertiesURLParams()
-	}
-
-	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetFleetTenantTenantIDSystemPropertiesURL",
-		Method:             "GET",
-		PathPattern:        "/fleet/tenant/{tenantId}/systemPropertiesUrl",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &GetFleetTenantTenantIDSystemPropertiesURLReader{formats: a.formats},
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return result.(*GetFleetTenantTenantIDSystemPropertiesURLOK), nil
-
-}
-
-/*
-PostFleetTenant creates fleet tenant
-*/
-func (a *Client) PostFleetTenant(params *PostFleetTenantParams) (*PostFleetTenantCreated, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewPostFleetTenantParams()
-	}
-
-	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PostFleetTenant",
+		ID:                 "createTenant",
 		Method:             "POST",
 		PathPattern:        "/fleet/tenant",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PostFleetTenantReader{formats: a.formats},
+		Reader:             &CreateTenantReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PostFleetTenantCreated), nil
+	return result.(*CreateTenantCreated), nil
 
 }
 
 /*
-PutFleetTenantTenantID updates fleet tenant
+DeleteTenant deletes fleet tenant
 */
-func (a *Client) PutFleetTenantTenantID(params *PutFleetTenantTenantIDParams) (*PutFleetTenantTenantIDNoContent, error) {
+func (a *Client) DeleteTenant(params *DeleteTenantParams) (*DeleteTenantNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewPutFleetTenantTenantIDParams()
+		params = NewDeleteTenantParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PutFleetTenantTenantID",
+		ID:                 "deleteTenant",
+		Method:             "DELETE",
+		PathPattern:        "/fleet/tenant/{tenantId}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteTenantReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteTenantNoContent), nil
+
+}
+
+/*
+DeleteTenantSystemProperties deletes fleet tenant system properties
+*/
+func (a *Client) DeleteTenantSystemProperties(params *DeleteTenantSystemPropertiesParams) (*DeleteTenantSystemPropertiesNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteTenantSystemPropertiesParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "deleteTenantSystemProperties",
+		Method:             "DELETE",
+		PathPattern:        "/fleet/tenant/{tenantId}/systemproperties",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteTenantSystemPropertiesReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteTenantSystemPropertiesNoContent), nil
+
+}
+
+/*
+GetTenantByID gets fleet tenant details
+*/
+func (a *Client) GetTenantByID(params *GetTenantByIDParams) (*GetTenantByIDOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetTenantByIDParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "getTenantById",
+		Method:             "GET",
+		PathPattern:        "/fleet/tenant/{tenantId}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &GetTenantByIDReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*GetTenantByIDOK), nil
+
+}
+
+/*
+ListTenants lists fleet tenants
+*/
+func (a *Client) ListTenants(params *ListTenantsParams) (*ListTenantsOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewListTenantsParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "listTenants",
+		Method:             "GET",
+		PathPattern:        "/fleet/tenant",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &ListTenantsReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*ListTenantsOK), nil
+
+}
+
+/*
+UpdateTenant updates fleet tenant
+*/
+func (a *Client) UpdateTenant(params *UpdateTenantParams) (*UpdateTenantNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateTenantParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "updateTenant",
 		Method:             "PUT",
 		PathPattern:        "/fleet/tenant/{tenantId}",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PutFleetTenantTenantIDReader{formats: a.formats},
+		Reader:             &UpdateTenantReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PutFleetTenantTenantIDNoContent), nil
+	return result.(*UpdateTenantNoContent), nil
+
+}
+
+/*
+UploadTenantSystemProperties uploads fleet tenant system properties
+*/
+func (a *Client) UploadTenantSystemProperties(params *UploadTenantSystemPropertiesParams) (*UploadTenantSystemPropertiesOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUploadTenantSystemPropertiesParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "uploadTenantSystemProperties",
+		Method:             "GET",
+		PathPattern:        "/fleet/tenant/{tenantId}/systemproperties",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UploadTenantSystemPropertiesReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*UploadTenantSystemPropertiesOK), nil
 
 }
 

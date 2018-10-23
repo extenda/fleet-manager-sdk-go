@@ -53,30 +53,58 @@ func (a *Client) DeleteInventoryManufacturerManufacturerIDModelModelID(params *D
 }
 
 /*
-DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURL deletes inventory model j p o s entries XML
+DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversion unlinks inventory model from driver version
 */
-func (a *Client) DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURL(params *DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLParams) (*DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLNoContent, error) {
+func (a *Client) DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversion(params *DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversionParams) (*DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversionNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLParams()
+		params = NewDeleteInventoryManufacturerManufacturerIDModelModelIDDriverversionParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURL",
+		ID:                 "DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversion",
 		Method:             "DELETE",
-		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}/jposEntriesXmlUrl",
+		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}/driverversion",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLReader{formats: a.formats},
+		Reader:             &DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversionReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*DeleteInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLNoContent), nil
+	return result.(*DeleteInventoryManufacturerManufacturerIDModelModelIDDriverversionNoContent), nil
+
+}
+
+/*
+DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxml deletes inventory model j p o s entries XML
+*/
+func (a *Client) DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxml(params *DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlParams) (*DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewDeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlParams()
+	}
+
+	result, err := a.transport.Submit(&runtime.ClientOperation{
+		ID:                 "DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxml",
+		Method:             "DELETE",
+		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}/jposentriesxml",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlReader{formats: a.formats},
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.(*DeleteInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlNoContent), nil
 
 }
 
@@ -137,30 +165,30 @@ func (a *Client) GetInventoryManufacturerManufacturerIDModelModelID(params *GetI
 }
 
 /*
-GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURL uploads inventory model j p o s entries XML
+GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxml uploads inventory model j p o s entries XML
 */
-func (a *Client) GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURL(params *GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLParams) (*GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLOK, error) {
+func (a *Client) GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxml(params *GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlParams) (*GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLParams()
+		params = NewGetInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURL",
+		ID:                 "GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxml",
 		Method:             "GET",
-		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}/jposEntriesXmlUrl",
+		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}/jposentriesxml",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLReader{formats: a.formats},
+		Reader:             &GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*GetInventoryManufacturerManufacturerIDModelModelIDJposEntriesXMLURLOK), nil
+	return result.(*GetInventoryManufacturerManufacturerIDModelModelIDJposentriesxmlOK), nil
 
 }
 
@@ -193,30 +221,30 @@ func (a *Client) PostInventoryManufacturerManufacturerIDModel(params *PostInvent
 }
 
 /*
-PostInventoryManufacturerManufacturerIDModelModelID links inventory model with driver version
+PostInventoryManufacturerManufacturerIDModelModelIDDriverversion links inventory model with driver version
 */
-func (a *Client) PostInventoryManufacturerManufacturerIDModelModelID(params *PostInventoryManufacturerManufacturerIDModelModelIDParams) (*PostInventoryManufacturerManufacturerIDModelModelIDNoContent, error) {
+func (a *Client) PostInventoryManufacturerManufacturerIDModelModelIDDriverversion(params *PostInventoryManufacturerManufacturerIDModelModelIDDriverversionParams) (*PostInventoryManufacturerManufacturerIDModelModelIDDriverversionNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewPostInventoryManufacturerManufacturerIDModelModelIDParams()
+		params = NewPostInventoryManufacturerManufacturerIDModelModelIDDriverversionParams()
 	}
 
 	result, err := a.transport.Submit(&runtime.ClientOperation{
-		ID:                 "PostInventoryManufacturerManufacturerIDModelModelID",
+		ID:                 "PostInventoryManufacturerManufacturerIDModelModelIDDriverversion",
 		Method:             "POST",
-		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}",
+		PathPattern:        "/inventory/manufacturer/{manufacturerId}/model/{modelId}/driverversion",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"https"},
 		Params:             params,
-		Reader:             &PostInventoryManufacturerManufacturerIDModelModelIDReader{formats: a.formats},
+		Reader:             &PostInventoryManufacturerManufacturerIDModelModelIDDriverversionReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
 	}
-	return result.(*PostInventoryManufacturerManufacturerIDModelModelIDNoContent), nil
+	return result.(*PostInventoryManufacturerManufacturerIDModelModelIDDriverversionNoContent), nil
 
 }
 
